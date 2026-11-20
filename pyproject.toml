@@ -27,6 +27,7 @@ version = "0.0.9"
 triton = ["triton>=3.4", "safetensors>=0.5.3", "torch>=2.7.0"]
 torch = ["safetensors>=0.5.3", "torch>=2.7.0"]
 adapter = ["peft>=0.17", "transformers>=4.56.2", "accelerate", "safetensors", "torch>=2.8"]
+period = ["torch>=2.3", "numpy>=1.26", "safetensors>=0.5", "tokenizers>=0.21,<0.23"]
 metal = ["numpy", "tqdm", "safetensors", "torch"]
 test = ["pytest>=8.4.1", "httpx>=0.28.1", "pytest-asyncio"]
 coding = [

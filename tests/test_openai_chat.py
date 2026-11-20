@@ -7,6 +7,26 @@ from fastapi.testclient import TestClient
 from gpt_oss.responses_api.openai_chat import create_openai_chat
 
 
+def test_period_checkpoint_serves_locally_without_key():
+    assistant = MagicMock()
+    assistant.answer.return_value = "謹按原文，有言如下。"
+    with patch("gpt_oss.responses_api.openai_chat.aiohttp.ClientSession") as session:
+        with TestClient(create_openai_chat(period_assistant=assistant)) as client:
+            assert client.get("/api/chat-config").json() == {
+                "model_ready": True, "has_library": True, "cutoff_year": 1898,
+            }
+            response = client.post("/v1/responses", json={"input": [
+                {"role": "user", "content": "以前之問"},
+                {"role": "assistant", "content": "以前之答"},
+                {"role": "user", "content": "譯事三難何所指？"},
+            ]})
+            assert response.status_code == 200
+            assert response.json()["output"][0]["content"][0]["text"] == assistant.answer.return_value
+            assert response.json()["metadata"]["knowledge_cutoff_year"] == 1898
+            assistant.answer.assert_called_once_with("譯事三難何所指？")
+            session.assert_not_called()
+
+
 def test_missing_secret_and_role_validation(monkeypatch):
     monkeypatch.delenv("OPENAI_API_KEY", raising=False)
     with TestClient(create_openai_chat()) as client:
