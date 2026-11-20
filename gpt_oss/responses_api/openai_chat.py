@@ -5,15 +5,18 @@ import copy
 import os
 from pathlib import Path
 from typing import Literal
+from uuid import uuid4
 
 import aiohttp
 from fastapi import FastAPI, HTTPException
+from fastapi.concurrency import run_in_threadpool
 from pydantic import BaseModel, ConfigDict, Field
 
 from gpt_oss.classical import ClassicalCanon
 from gpt_oss.classical_library import ClassicalLibrary
 from gpt_oss.coding_library import DEFAULT_CATALOGUE, CodingLibrary
 from gpt_oss.chronology import ChronologyGuard
+from gpt_oss.vintage.period import CUTOFF_YEAR, PeriodAssistant
 from .chat_page import open_shuzhai
 
 
@@ -36,21 +39,23 @@ class ShuzhaiRequest(BaseModel):
 def create_openai_chat(canon: ClassicalCanon | None = None,
                        library: ClassicalLibrary | None = None,
                        coding_library: CodingLibrary | None | object = _DEFAULT,
-                       guard: ChronologyGuard | None | object = _DEFAULT) -> FastAPI:
+                       guard: ChronologyGuard | None | object = _DEFAULT,
+                       *, period_assistant: PeriodAssistant | None = None) -> FastAPI:
     """鑰藏於後臺；來客只得問學，不得改約。"""
     canon = canon or ClassicalCanon()
-    if coding_library is _DEFAULT:
+    if period_assistant is None and coding_library is _DEFAULT:
         coding_library = CodingLibrary.load_default()
     if guard is _DEFAULT:
         guard = ChronologyGuard(canon.cutoff_year)
     app = FastAPI()
-    open_shuzhai(app, canon.cutoff_year, library is not None,
-                 model_ready=lambda: bool(os.getenv("OPENAI_API_KEY")))
+    open_shuzhai(app, CUTOFF_YEAR if period_assistant else canon.cutoff_year,
+                 period_assistant is not None or library is not None,
+                 model_ready=lambda: period_assistant is not None or bool(os.getenv("OPENAI_API_KEY")))
 
     @app.post("/v1/responses")
     async def answer_scholar(body: ShuzhaiRequest):
         key = os.getenv("OPENAI_API_KEY")
-        if not key:
+        if period_assistant is None and not key:
             raise HTTPException(503, "尚未設定 OPENAI_API_KEY，請先於後臺 Secret 設定。")
         messages = ([{"role": "user", "content": body.input}] if isinstance(body.input, str)
                     else [{"role": m.role, "content": m.content} for m in body.input])
@@ -61,6 +66,13 @@ def create_openai_chat(canon: ClassicalCanon | None = None,
         if sum(len(m["content"]) for m in messages) > 100000:
             raise HTTPException(413, "此席文字過長，請另啟一席。")
         question = messages[-1]["content"]
+        if period_assistant is not None:
+            answer = await run_in_threadpool(period_assistant.answer, question)
+            return {"id": f"resp_{uuid4().hex}", "status": "completed",
+                    "output": [{"type": "message", "role": "assistant", "content": [
+                        {"type": "output_text", "text": answer}]}],
+                    "usage": None, "error": None,
+                    "metadata": {"model": "boolelot-period", "knowledge_cutoff_year": CUTOFF_YEAR}}
         programming_context = bool(
             coding_library is not None and coding_library.is_coding_query(question)
         )
@@ -146,12 +158,20 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="開書齋，通遠方學者。")
     parser.add_argument("--host", default="0.0.0.0")
     parser.add_argument("--port", type=int, default=8000)
-    parser.add_argument("--knowledge-cutoff-year", type=int, default=1899,
+    parser.add_argument("--knowledge-cutoff-year", type=int,
                         choices=range(1, 1900))
+    parser.add_argument("--period-checkpoint", type=Path, help="Use the local pre-1899 checkpoint")
     parser.add_argument("--classical-library", type=Path)
-    parser.add_argument("--coding-library", type=Path, default=DEFAULT_CATALOGUE)
+    parser.add_argument("--coding-library", type=Path)
     args = parser.parse_args()
-    uvicorn.run(create_openai_chat(ClassicalCanon(args.knowledge_cutoff_year),
-                ClassicalLibrary(args.classical_library) if args.classical_library else None,
-                coding_library=CodingLibrary(args.coding_library)),
-                host=args.host, port=args.port)
+    if args.period_checkpoint:
+        if args.knowledge_cutoff_year or args.classical_library or args.coding_library:
+            parser.error("--period-checkpoint uses its own sources and cutoff")
+        app = create_openai_chat(period_assistant=PeriodAssistant(args.period_checkpoint))
+    else:
+        app = create_openai_chat(
+            ClassicalCanon(args.knowledge_cutoff_year or 1899),
+            ClassicalLibrary(args.classical_library) if args.classical_library else None,
+            coding_library=CodingLibrary(args.coding_library or DEFAULT_CATALOGUE),
+        )
+    uvicorn.run(app, host=args.host, port=args.port)

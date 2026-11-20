@@ -1,0 +1,476 @@
+{
+  "cutoff_year": 1898,
+  "sources": {
+    "yan-1898": {
+      "title": "嚴復《天演論》",
+      "year": 1898,
+      "location": "譯例言",
+      "url": "https://zh.wikisource.org/w/index.php?title=天演論/譯例言&oldid=106489"
+    },
+    "liang-1896": {
+      "title": "梁啟超《變法通議》",
+      "year": 1896,
+      "location": "自序",
+      "url": "https://zh.wikisource.org/zh-hant/變法通議自序"
+    },
+    "ma-1898": {
+      "title": "馬建忠《馬氏文通》",
+      "year": 1898,
+      "location": "序",
+      "url": "https://ctext.org/wiki.pl?chapter=898316&if=gb"
+    },
+    "lovelace-1843": {
+      "title": "Ada Lovelace, Notes on the Analytical Engine",
+      "year": 1843,
+      "location": "Note A",
+      "url": "https://www.fourmilab.ch/babbage/sketch.html#NoteA"
+    },
+    "carroll-1896": {
+      "title": "Lewis Carroll, Symbolic Logic",
+      "year": 1896,
+      "location": "Book I, Chapter I",
+      "url": "https://etc.usf.edu/lit2go/212/symbolic-logic/4678/book-1-chapter-1/"
+    },
+    "huxley-1893": {
+      "title": "T. H. Huxley, Evolution and Ethics",
+      "year": 1893,
+      "location": "Romanes Lecture, closing argument",
+      "url": "https://aleph0.clarku.edu/huxley/CE9/E-E.html"
+    },
+    "euclid-vii-2": {
+      "title": "Euclid, Elements (Heiberg edition)",
+      "year": 1884,
+      "location": "Book VII, Proposition 2",
+      "url": "https://books.google.com/books?id=L38GhK-xpo4C",
+      "date_note": "The 1884 Greek and Latin edition presents the ancient work."
+    },
+    "euclid-vii-34": {
+      "title": "Euclid, Elements (Heiberg edition)",
+      "year": 1884,
+      "location": "Book VII, Proposition 34",
+      "url": "https://books.google.com/books?id=L38GhK-xpo4C",
+      "date_note": "The 1884 Greek and Latin edition presents the ancient work."
+    },
+    "boole-1854": {
+      "title": "George Boole, An Investigation of the Laws of Thought",
+      "year": 1854,
+      "location": "Chapter II, Signs and Their Laws",
+      "url": "https://archive.org/details/bub_gb_KjQCAAAAQAAJ",
+      "date_note": "The Python set operations are present-day transcriptions of class selection, disjoint aggregation and the complement relative to a universe. Boole limits simple addition to disjoint classes."
+    },
+    "fibonacci-1857": {
+      "title": "Leonardo Pisano, Liber Abbaci (Boncompagni edition)",
+      "year": 1857,
+      "location": "Chapter XII, Quot paria coniculorum",
+      "url": "https://archive.org/details/bub_gb_CrdUBgtAZFoC",
+      "date_note": "The 1857 Latin edition reproduces the work revised in 1228."
+    },
+    "pascal-1665": {
+      "title": "Blaise Pascal, Traité du triangle arithmétique",
+      "year": 1665,
+      "location": "Conséquences du triangle arithmétique",
+      "url": "https://archive.org/details/bub_gb_UqgUAAAAQAAJ"
+    },
+    "nicomachus-1866": {
+      "title": "Nicomachus, Introduction to Arithmetic (Hoche edition)",
+      "year": 1866,
+      "location": "Book I, Chapter XIII, pp. 29–32",
+      "url": "https://archive.org/details/nicomachigerasen00nicouoft/page/30/mode/2up",
+      "date_note": "The 1866 Greek edition presents the ancient account of the sieve of Eratosthenes."
+    },
+    "nicomachus-parts-1866": {
+      "title": "Nicomachus, Introduction to Arithmetic (Hoche edition)",
+      "year": 1866,
+      "location": "Book I, Chapter XVI",
+      "url": "https://books.google.com/books?id=9xwAAAAAYAAJ"
+    },
+    "nicomachus-triangles-1866": {
+      "title": "Nicomachus, Introduction to Arithmetic (Hoche edition)",
+      "year": 1866,
+      "location": "Book II, Chapter VIII",
+      "url": "https://books.google.com/books?id=9xwAAAAAYAAJ"
+    },
+    "euclid-measure": {
+      "title": "Euclid, Elements (Heiberg edition)",
+      "year": 1884,
+      "location": "Book VII, Definition 3",
+      "url": "https://books.google.com/books?id=L38GhK-xpo4C"
+    },
+    "euler-powers-1822": {
+      "title": "Leonhard Euler, Elements of Algebra (Hewlett translation)",
+      "year": 1822,
+      "location": "Part I, Section I, Of Powers in General",
+      "url": "https://books.google.com/books?id=X8yv0sj4_1YC"
+    },
+    "galton-1889": {
+      "title": "Francis Galton, Natural Inheritance",
+      "year": 1889,
+      "location": "Chapter IV, Schemes of Distribution and of Frequency, pp. 40–41",
+      "url": "https://archive.org/details/naturalinherita00galt/page/40/mode/2up"
+    },
+    "cayley-1858": {
+      "title": "Arthur Cayley, A Memoir on the Theory of Matrices",
+      "year": 1858,
+      "location": "Philosophical Transactions, Vol. 148, pp. 17–37",
+      "url": "https://www.jstor.org/stable/108649",
+      "date_note": "The program uses the row-by-column composition rule and allows compatible rectangular inputs."
+    }
+  },
+  "passages": [
+    {
+      "id": "yan-fidelity",
+      "source": "yan-1898",
+      "locator": "第一則",
+      "text": "譯事三難：信、達、雅。求其信已大難矣，顧信矣不達，雖譯猶不譯也，則達尚焉。",
+      "sha256": "d785fdff02ef770000e7768c407b96721ae84c0e6fe2b2c5174013b58b8ad611",
+      "aliases": [
+        "譯事三難",
+        "信達雅",
+        "嚴復",
+        "天演論",
+        "yan fu"
+      ],
+      "split": "train"
+    },
+    {
+      "id": "yan-syntax",
+      "source": "yan-1898",
+      "locator": "第二則",
+      "text": "至原文詞理本深，難於共喻，則當前後引襯，以顯其意。凡此經營，皆以為達，為達即所以為信也。",
+      "sha256": "59c214b613f1c9222e5f5b3c052329416cd703fe9432207b5a7bdde70f2f6a2f",
+      "aliases": [
+        "前後引襯",
+        "為達即所以為信",
+        "西文句法"
+      ],
+      "split": "train"
+    },
+    {
+      "id": "yan-inquiry",
+      "source": "yan-1898",
+      "locator": "第六則",
+      "text": "窮理與從政相同，皆貴集思廣益。今遇原文所論，與他書有異同者，輒就譾陋所知，列入後案，以資參考。",
+      "sha256": "be78dabaa9fb20990597c5d14a929a9896bbf30cbcdacd76eb57ef524eba3b3c",
+      "aliases": [
+        "集思廣益",
+        "窮理",
+        "後案"
+      ],
+      "split": "train"
+    },
+    {
+      "id": "liang-change",
+      "source": "liang-1896",
+      "locator": "首段",
+      "text": "故夫變者，古今之公理也：貢助之法變為租庸調，租庸調變為兩稅，兩稅變為一條鞭。",
+      "sha256": "3df483938e167cd460e58d8e6183160907f534f4796dd0cecbc08707e3542a37",
+      "aliases": [
+        "變法通議",
+        "梁啟超",
+        "古今之公理",
+        "liang qichao",
+        "一條鞭"
+      ],
+      "split": "train"
+    },
+    {
+      "id": "ma-characters",
+      "source": "ma-1898",
+      "locator": "論文字形聲",
+      "text": "殊不知古先造字，點畫音韵，千變萬化，其賦以形而命以聲者，原無不變之理。",
+      "sha256": "a124a7ad7f9a394b14955ecf3047fee07c20fa6c42d0df6c5793b1c64ad7c456",
+      "aliases": [
+        "馬氏文通",
+        "馬建忠",
+        "點畫音韵",
+        "形聲",
+        "ma jianzhong"
+      ],
+      "split": "eval"
+    },
+    {
+      "id": "lovelace-weaving",
+      "source": "lovelace-1843",
+      "locator": "paragraph on Jacquard cards",
+      "text": "We may say most aptly, that the Analytical Engine weaves algebraical patterns just as the Jacquard-loom weaves flowers and leaves.",
+      "sha256": "27bfca7255afd0e64c8273a0ba7fe85cf8c95986090a5fc16e2d89ce52dc2342",
+      "aliases": [
+        "lovelace",
+        "analytical engine",
+        "jacquard",
+        "分析機",
+        "洛夫萊斯"
+      ],
+      "split": "train"
+    },
+    {
+      "id": "carroll-attributes",
+      "source": "carroll-1896",
+      "locator": "opening example",
+      "text": "The Universe contains ‘Things.’",
+      "sha256": "790b181d6862bae90e9ea8dc5268275d450dce469ebe88cf4ed27889fd4bb1a5",
+      "aliases": [
+        "symbolic logic",
+        "lewis carroll",
+        "符號邏輯",
+        "卡羅爾"
+      ],
+      "split": "train"
+    },
+    {
+      "id": "huxley-ethics",
+      "source": "huxley-1893",
+      "locator": "paragraph beginning ‘Let us understand’",
+      "text": "Let us understand, once for all, that the ethical progress of society depends, not on imitating the cosmic process, still less in running away from it, but in combating it.",
+      "sha256": "4c622627f81a3b3da44528f3a889fb06ca61a077d226f4e331e7bfabd3c96183",
+      "aliases": [
+        "evolution and ethics",
+        "cosmic process",
+        "huxley",
+        "赫胥黎"
+      ],
+      "split": "eval"
+    },
+    {
+      "id": "yan-names",
+      "source": "yan-1898",
+      "locator": "第四則",
+      "text": "新理踵出，名目紛繁，索之中文，渺不可得，即有牽合，終嫌參差，譯者遇此，獨有自具衡量，即義定名。",
+      "aliases": [
+        "即義定名",
+        "名目紛繁",
+        "新理踵出"
+      ],
+      "split": "train",
+      "sha256": "cf74a4438d229c790bc0194f2c7685ac7101d8e98f1138caa997b63ae098fa03"
+    },
+    {
+      "id": "yan-opinion",
+      "source": "yan-1898",
+      "locator": "第六則末",
+      "text": "是非然否，以俟公論，不敢固也。",
+      "aliases": [
+        "以俟公論",
+        "不敢固也"
+      ],
+      "split": "train",
+      "sha256": "4e81a178d5f96a2e47b0ca816ce0701fe7b6b9dfdc98ac97e93b4a09a3ad5738"
+    },
+    {
+      "id": "liang-reform",
+      "source": "liang-1896",
+      "locator": "首段後半",
+      "text": "上下千歲，無時不變，無事不變，公理有固然，非夫人之為也。",
+      "aliases": [
+        "上下千歲",
+        "無時不變",
+        "無事不變"
+      ],
+      "split": "train",
+      "sha256": "1ec154659d33fb64b9e041a15053d88fbe1dbbb43ff8c7c5b97d6d35e6f5935a"
+    },
+    {
+      "id": "carroll-rose",
+      "source": "carroll-1896",
+      "locator": "example on attributes",
+      "text": "Thus, the Thing “a rose” may have the Attributes “red,” “scented,” “full-blown,” &c.",
+      "aliases": [
+        "rose example",
+        "attributes of a rose",
+        "玫瑰之例"
+      ],
+      "split": "train",
+      "sha256": "f4ec4c67fb75acaafd4ba13d91b6a576a2a081e774e79afdefbac60755cf20ec"
+    }
+  ],
+  "programs": {
+    "gcd": {
+      "source": "euclid-vii-2",
+      "zh": "求二整數之最大公因數",
+      "en": "Determine the greatest common divisor of two integers",
+      "aliases": [
+        "gcd",
+        "greatest common divisor",
+        "highest common factor",
+        "largest shared divisor",
+        "最大公因數",
+        "最大公約數",
+        "輾轉相除"
+      ]
+    },
+    "lcm": {
+      "source": "euclid-vii-34",
+      "zh": "求二整數之最小公倍數",
+      "en": "Determine the least common multiple of two integers",
+      "aliases": [
+        "lcm",
+        "least common multiple",
+        "lowest common multiple",
+        "smallest shared multiple",
+        "最小公倍數"
+      ]
+    },
+    "intersection": {
+      "source": "boole-1854",
+      "zh": "取兩集合所共有者",
+      "en": "Take the members common to both sets",
+      "aliases": [
+        "intersection",
+        "shared members",
+        "elements common to both",
+        "elements in both",
+        "交集",
+        "兩集合共有"
+      ]
+    },
+    "union": {
+      "source": "boole-1854",
+      "zh": "合兩集合而不重其成員",
+      "en": "Gather the members of either set",
+      "aliases": [
+        "union",
+        "members of either set",
+        "merge two sets",
+        "join two sets",
+        "聯集",
+        "並集"
+      ]
+    },
+    "complement": {
+      "source": "boole-1854",
+      "zh": "自全集去其子集",
+      "en": "Remove the subset from the given universe",
+      "aliases": [
+        "complement",
+        "set difference",
+        "outside the subset",
+        "remove a subset",
+        "補集",
+        "差集"
+      ]
+    },
+    "fibonacci": {
+      "source": "fibonacci-1857",
+      "zh": "自零與一起，以前二項之和求後項",
+      "en": "Start with zero and one, and add two successive terms to obtain the next",
+      "aliases": [
+        "fibonacci",
+        "rabbit sequence",
+        "斐波那契",
+        "費波那契",
+        "兔子數列"
+      ]
+    },
+    "binomial": {
+      "source": "pascal-1665",
+      "zh": "求算術三角中所問之二項係數",
+      "en": "Determine the requested coefficient of the arithmetical triangle",
+      "aliases": [
+        "binomial",
+        "n choose k",
+        "二項係數"
+      ]
+    },
+    "primes": {
+      "source": "nicomachus-1866",
+      "zh": "逐次劃去合數，以求不逾所定之素數",
+      "en": "Strike out the composite numbers to obtain the primes up to the given bound",
+      "aliases": [
+        "sieve",
+        "prime numbers",
+        "primes up to",
+        "list primes",
+        "素數",
+        "質數",
+        "篩法"
+      ]
+    },
+    "triangular": {
+      "source": "nicomachus-triangles-1866",
+      "zh": "求自一至所定整數之總和",
+      "en": "Find the triangular number by adding the integers up to the given bound",
+      "aliases": [
+        "triangular number",
+        "三角數",
+        "自然數之和"
+      ]
+    },
+    "perfect_number": {
+      "source": "nicomachus-parts-1866",
+      "zh": "驗真因數之和是否適與本數相等",
+      "en": "Examine whether the sum of the proper divisors equals the number itself",
+      "aliases": [
+        "perfect number",
+        "完全數",
+        "完美數"
+      ]
+    },
+    "divisors": {
+      "source": "euclid-measure",
+      "zh": "列出所定正整數之一切正因數",
+      "en": "Enumerate the positive divisors of the given positive integer",
+      "aliases": [
+        "positive divisors",
+        "all divisors",
+        "正因數",
+        "正約數"
+      ]
+    },
+    "integer_power": {
+      "source": "euler-powers-1822",
+      "zh": "求所定數之非負整次冪",
+      "en": "Raise the given number to the nonnegative integral power",
+      "aliases": [
+        "integer power",
+        "integer exponent",
+        "integral power",
+        "整數次冪",
+        "整次冪"
+      ]
+    },
+    "median": {
+      "source": "galton-1889",
+      "zh": "先序諸數，取居中之值；偶數則折取二中數之均",
+      "en": "Arrange the numbers in order and take the middle, averaging the middle pair when necessary",
+      "aliases": [
+        "median",
+        "中位數",
+        "中值"
+      ]
+    },
+    "matrix_product": {
+      "source": "cayley-1858",
+      "zh": "以左矩陣之列對右矩陣之行，逐項相乘而加之",
+      "en": "Multiply two compatible matrices by taking each row against each column",
+      "aliases": [
+        "matrix product",
+        "multiply two matrices",
+        "matrix multiplication",
+        "矩陣乘法",
+        "矩陣相乘"
+      ]
+    },
+    "determinant_2x2": {
+      "source": "cayley-1858",
+      "zh": "求二階方陣兩對角乘積之差",
+      "en": "Find the determinant of a two-by-two matrix by taking the difference of the diagonal products",
+      "aliases": [
+        "determinant",
+        "行列式"
+      ]
+    },
+    "pascal_row": {
+      "source": "pascal-1665",
+      "zh": "求算術三角之指定一列，首列以零計",
+      "en": "Find the designated row of the arithmetical triangle, reckoning the first as zero",
+      "aliases": [
+        "row of pascal",
+        "pascal row",
+        "pascal’s triangle row",
+        "pascal's triangle row",
+        "帕斯卡三角",
+        "楊輝三角"
+      ]
+    }
+  }
+}

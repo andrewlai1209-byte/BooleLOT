@@ -6,6 +6,8 @@
 
 BoolieLOT is an experimental project that explores historical ideas and programming through the perspective of a classical scholar and engineer. It aims to discuss knowledge from 1899 and earlier in elegant Traditional Chinese, while using modern programming techniques to implement classical concepts, simulate machinery, and create games.
 
+The [BooleLOT period checkpoint](docs/period_model.md) is a separately trained, local pilot. Its sources end on December 31, 1898. It quotes period texts with citations and generates Python for a defined set of mathematical exercises. The same checkpoint works in the terminal and the web chat.
+
 ### Project status
 
 - Reviewed notes record sources and knowledge dates, covering works such as *Tiangong Kaiwu*, Leonardo da Vinci’s notebooks, and Boole’s logic. A later edition’s publication date is distinct from the date of its original content.
